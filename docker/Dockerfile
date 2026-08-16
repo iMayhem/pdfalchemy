@@ -18,4 +18,4 @@ RUN mkdir -p /tmp/pdfalchemy/uploads /tmp/pdfalchemy/outputs
 
 EXPOSE 8000
 
-CMD ["uvicorn", "pdfalchemy.api.server:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "pdfalchemy.web.app:create_app", "--factory", "--host", "0.0.0.0", "--port", "8000"]

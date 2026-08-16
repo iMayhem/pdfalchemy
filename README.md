@@ -11,6 +11,29 @@ A unique, memory-efficient PDF conversion and editing library designed for VPS d
 - **REST API + WebSockets**: Async conversion with real-time progress tracking.
 - **Dockerized**: One-command deployment on any VPS.
 
+## Web UI
+
+PDFAlchemy includes a full browser-based editor. Launch it with:
+
+```bash
+pip install -e .
+python -m pdfalchemy.web_server
+```
+
+Then open `http://your-vps-ip:8000` in your browser.
+
+### Web UI Features
+- Drag & drop PDF upload
+- Live page preview with thumbnails
+- Text content view with semantic highlighting
+- Convert to DOCX, HTML, Markdown, or JSON
+- Watermark with customizable text, opacity, and size
+- Compress with size reduction stats
+- Rotate all pages (90°, 180°, 270°)
+- Split by page ranges into multiple files
+- Extract images from the PDF
+- Redact sensitive areas by coordinates
+
 ## Quick Start
 
 ### Installation

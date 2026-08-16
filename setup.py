@@ -18,6 +18,9 @@ setup(
     ],
     python_requires=">=3.9",
     entry_points={
-        "console_scripts": ["pdfalchemy=pdfalchemy.cli:main"],
+        "console_scripts": [
+            "pdfalchemy=pdfalchemy.cli:main",
+            "pdfalchemy-web=pdfalchemy.web_server:app"
+        ],
     },
 )
