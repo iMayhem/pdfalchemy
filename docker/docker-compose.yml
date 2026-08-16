@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  pdfalchemy:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - pdfalchemy-data:/tmp/pdfalchemy
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+        reservations:
+          memory: 256M
+
+volumes:
+  pdfalchemy-data:
